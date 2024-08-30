@@ -929,6 +929,10 @@ video {
   width: 100%;
 }
 
+.w-\[90\%\] {
+  width: 90%;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -939,6 +943,10 @@ video {
 
 .max-w-7xl {
   max-width: 80rem;
+}
+
+.max-w-\[500px\] {
+  max-width: 500px;
 }
 
 .flex-shrink {
