@@ -26,6 +26,7 @@ let cart = [];
 cartBtn.addEventListener("click", function () {
     updataCartModal();
     cartModal.style.display = "flex";
+    openCartModal();
 });
 
 //fechar modal do carrinho quando clica fora
@@ -33,11 +34,13 @@ cartModal.addEventListener("click", function (event){
    if(event.target === cartModal) {
        cartModal.style.display = "none";
    }
+   closeCartModal();
 });
 
 //fechar carrinho quando clica no fechar
 closeModalBtn.addEventListener("click", function () {
     cartModal.style.display = "none";
+    closeCartModal();
 });
 
 menu.addEventListener("click", function (event){
@@ -345,4 +348,15 @@ function verificarPagamentoSelecionado() {
     } else {
         return null; // Retorna null se nenhuma opção estiver selecionada
     }
+}
+
+function openCartModal() {
+    cartModal.classList.remove('hidden'); // Mostra o modal
+    document.body.classList.add('overflow-hidden'); // Desabilita o scroll do body
+}
+
+// Função para fechar o modal
+function closeCartModal() {
+    cartModal.classList.add('hidden'); // Esconde o modal
+    document.body.classList.remove('overflow-hidden'); // Habilita o scroll do body
 }

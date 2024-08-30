@@ -328,16 +328,13 @@
             <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
                 <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
 
-                <!--  <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>-->
                 <div id="cart-items" class="flex justify-between mb-2 flex-col" style="max-height: 450px; overflow-y: auto;"></div>
 
-                <!-- Opções de pagamento -->
                 <p class="font-bold">Forma de pagamento:</p>
                 <div class="flex flex-col mb-4">
                     <label class="flex items-center">
                         <input type="radio" name="payment" value="dinheiro" id="dinheiro" class="mr-2"> Dinheiro
                     </label>
-                    <!-- Input do valor do troco -->
                     <input type="text" id="troco-input" placeholder="Valor do troco" class="border-2 p-1 rounded my-1 hidden" size="20">
                     <p class="text-red-500 hidden" id="warn-troco">Digite o valor do troco!</p>
 
@@ -351,7 +348,6 @@
                 <p class="text-red-500 hidden" id="warn-pagamento">Escolha a forma de pagamento!</p>
 
                 <p class="font-bold mt-4">Endereço de entrega:</p>
-                <!-- <input type="text" placeholder="Rua, número" id="addres" class="w-full border-2 p-1 rounded my-1"/>-->
                 <input type="text" placeholder="Rua" id="addres" class="border-2 p-1 rounded my-1" maxlength="50" style="flex: 4; margin-right: 10px;" />
                 <p class="text-red-500 hidden" id="addres-warn">Digite seu endereço completo!</p>
                 
