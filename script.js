@@ -350,13 +350,31 @@ function verificarPagamentoSelecionado() {
     }
 }
 
+// Função para bloquear o scroll
+function disableScroll() {
+    document.body.style.overflow = 'hidden'; // Para desktops e alguns navegadores móveis
+    document.addEventListener('touchmove', preventScroll, { passive: false }); // Para navegadores móveis
+}
+
+// Função para restaurar o scroll
+function enableScroll() {
+    document.body.style.overflow = ''; // Restaura o comportamento padrão
+    document.removeEventListener('touchmove', preventScroll); // Restaura para navegadores móveis
+}
+
+// Função para prevenir o scroll
+function preventScroll(e) {
+    e.preventDefault(); // Impede o scroll
+}
+
+// Função para abrir o modal
 function openCartModal() {
     cartModal.classList.remove('hidden'); // Mostra o modal
-    document.body.classList.add('overflow-hidden'); // Desabilita o scroll do body
+    disableScroll(); // Desabilita o scroll
 }
 
 // Função para fechar o modal
 function closeCartModal() {
     cartModal.classList.add('hidden'); // Esconde o modal
-    document.body.classList.remove('overflow-hidden'); // Habilita o scroll do body
+    enableScroll(); // Habilita o scroll
 }
