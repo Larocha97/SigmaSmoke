@@ -26,7 +26,7 @@ let cart = [];
 cartBtn.addEventListener("click", function () {
     updataCartModal();
     cartModal.style.display = "flex";
-    openCartModal();
+    /* openCartModal(); */
 });
 
 //fechar modal do carrinho quando clica fora
@@ -34,13 +34,13 @@ cartModal.addEventListener("click", function (event){
    if(event.target === cartModal) {
        cartModal.style.display = "none";
    }
-   closeCartModal();
+   /* closeCartModal(); */
 });
 
 //fechar carrinho quando clica no fechar
 closeModalBtn.addEventListener("click", function () {
     cartModal.style.display = "none";
-    closeCartModal();
+    /* closeCartModal(); */
 });
 
 menu.addEventListener("click", function (event){
